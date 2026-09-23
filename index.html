@@ -36,30 +36,59 @@
   <div class="overlay" id="overlay">
     <div class="sheet" id="sheet">
       <div class="sheet-grip"></div>
-      <div class="sheet-icon">🔒</div>
-      <h2 class="sheet-title">Oops — turning it on was free.</h2>
-      <p class="sheet-price">Turning it off is $299.</p>
-      <p class="sheet-desc">Deactivation is a premium feature. To restore darkness, purchase a one-time Deactivation License&trade;.</p>
 
-      <div class="lineitems">
-        <div class="lineitem">
-          <span>Deactivation License&trade;</span>
-          <span>$299.00</span>
+      <div class="step active" id="stepPaywall">
+        <div class="sheet-icon">🔒</div>
+        <h2 class="sheet-title">Oops — turning it on was free.</h2>
+        <p class="sheet-price">Turning it off is $299.</p>
+        <p class="sheet-desc">Deactivation is a premium feature. To restore darkness, purchase a one-time Deactivation License&trade;.</p>
+
+        <div class="lineitems">
+          <div class="lineitem">
+            <span>Deactivation License&trade;</span>
+            <span>$299.00</span>
+          </div>
+          <div class="lineitem muted">
+            <span>Darkness restoration fee</span>
+            <span>$0.00*</span>
+          </div>
+          <div class="lineitem total">
+            <span>Total</span>
+            <span>$299.00</span>
+          </div>
         </div>
-        <div class="lineitem muted">
-          <span>Darkness restoration fee</span>
-          <span>$0.00*</span>
-        </div>
-        <div class="lineitem total">
-          <span>Total</span>
-          <span>$299.00</span>
-        </div>
+
+        <p class="fineprint">*Waived for a limited time. License is non-refundable, non-transferable, and expires the moment you turn the light back on. This is a prank — no payment is ever processed.</p>
+
+        <button class="pay-btn" id="payBtn">💳 Pay $299 to Turn Off</button>
+        <button class="live-btn" id="liveBtn">I'll live with the light on</button>
       </div>
 
-      <p class="fineprint">*Waived for a limited time. License is non-refundable, non-transferable, and expires the moment you turn the light back on. This is a prank — no payment is ever processed.</p>
+      <div class="step" id="stepQr">
+        <div class="sheet-icon">💳</div>
+        <h2 class="sheet-title">Scan to Pay</h2>
+        <p class="sheet-price">$299.00</p>
+        <div class="qr-wrap">
+          <div class="qr-code" id="qrCode" aria-hidden="true"></div>
+        </div>
+        <p class="sheet-desc">Open your banking app and scan the code to complete the Deactivation License&trade; purchase.</p>
+        <button class="pay-btn" id="scanBtn" disabled>Waiting for scan… (10)</button>
+        <button class="live-btn" id="qrCancelBtn">Cancel</button>
+      </div>
 
-      <button class="pay-btn" id="payBtn">💳 Pay $299 to Turn Off</button>
-      <button class="live-btn" id="liveBtn">I'll live with the light on</button>
+      <div class="step" id="stepVerify">
+        <div class="sheet-icon">⏳</div>
+        <h2 class="sheet-title">Verifying Payment</h2>
+        <p class="sheet-desc">Connecting to payment network...</p>
+        <div class="loader"></div>
+      </div>
+
+      <div class="step" id="stepGotcha">
+        <div class="sheet-icon">😂</div>
+        <h2 class="sheet-title">Just kidding!</h2>
+        <p class="sheet-desc">No payment was ever processed — this is a novelty app. Enjoy the darkness.</p>
+        <button class="pay-btn" id="gotchaBtn">Nice</button>
+      </div>
     </div>
   </div>
 
