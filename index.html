@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flashlight</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <span class="title">Flashlight</span>
+      <span class="status" id="status">Off</span>
+    </header>
+
+    <main class="stage">
+      <button class="torch" id="torchBtn" aria-label="Toggle flashlight">
+        <span class="torch-ring"></span>
+        <span class="torch-icon">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 5 5 5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z"/>
+            <line x1="12" y1="15" x2="12" y2="22"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="hint">
+        <p class="hint-main" id="hintMain">Tap to turn on</p>
+        <p class="hint-sub" id="hintSub">Free · No credit card required</p>
+      </div>
+    </main>
+
+    <footer class="footer">Flashlight v2.0 · A novelty app. No real payments, no real photons.</footer>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="sheet" id="sheet">
+      <div class="sheet-grip"></div>
+      <div class="sheet-icon">🔒</div>
+      <h2 class="sheet-title">Oops — turning it on was free.</h2>
+      <p class="sheet-price">Turning it off is $299.</p>
+      <p class="sheet-desc">Deactivation is a premium feature. To restore darkness, purchase a one-time Deactivation License&trade;.</p>
+
+      <div class="lineitems">
+        <div class="lineitem">
+          <span>Deactivation License&trade;</span>
+          <span>$299.00</span>
+        </div>
+        <div class="lineitem muted">
+          <span>Darkness restoration fee</span>
+          <span>$0.00*</span>
+        </div>
+        <div class="lineitem total">
+          <span>Total</span>
+          <span>$299.00</span>
+        </div>
+      </div>
+
+      <p class="fineprint">*Waived for a limited time. License is non-refundable, non-transferable, and expires the moment you turn the light back on. This is a prank — no payment is ever processed.</p>
+
+      <button class="pay-btn" id="payBtn">💳 Pay $299 to Turn Off</button>
+      <button class="live-btn" id="liveBtn">I'll live with the light on</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
